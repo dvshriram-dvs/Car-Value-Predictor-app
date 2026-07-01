@@ -1,4 +1,4 @@
-# 🚗 Car Price Predictor
+# 🚗 Car Value Predictor
 
 A Machine Learning-powered web application that estimates the resale value of a used car based on vehicle specifications and ownership details. The application uses a trained Random Forest Regression model and provides instant price predictions through an interactive Flask-based web interface.
 
