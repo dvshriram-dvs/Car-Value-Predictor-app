@@ -1,3 +1,4 @@
+
 # 🚗 Car Value Predictor
 
 A Machine Learning-powered web application that estimates the resale value of a used car based on vehicle specifications and ownership details. The application uses a trained Random Forest Regression model and provides instant price predictions through an interactive Flask-based web interface.
@@ -187,3 +188,4 @@ This project is developed for educational and academic purposes.
 23MIM10044
 Integrated M.Tech in Artificial Intelligence
 VIT Bhopal University
+
