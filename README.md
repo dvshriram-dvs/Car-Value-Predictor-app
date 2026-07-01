@@ -1,114 +1,189 @@
-# 🚗 Car Price Prediction System
+# 🚗 Car Price Predictor
 
-An end-to-end Machine Learning web application that predicts the resale price of a car based on its specifications, features, and history. The system trains a Random Forest Regressor model on historical automotive data and serves real-time predictions via a production-ready Flask interface deployed in the cloud.
+A Machine Learning-powered web application that estimates the resale value of a used car based on vehicle specifications and ownership details. The application uses a trained Random Forest Regression model and provides instant price predictions through an interactive Flask-based web interface.
 
 ---
 
-## 👤 Developer Profile
-* **Name:** Akshat Garg
-* **Registration Number:** 23BCE10641
-* **Course:** B.Tech Computer Science and Engineering
+## 👨‍💻 Developer
+
+* **Name:** D V Shriram
+* **Registration Number:** 23MIM10044
+* **Program:** Integrated M.Tech in Artificial Intelligence
+* **University:** VIT Bhopal University
 
 ---
 
 ## 🔗 Project Links
-* **Live Web Application:** [https://car-price-prediction-app-00au.onrender.com](https://car-price-prediction-app-00au.onrender.com)
-* **GitHub Repository:** [https://github.com/AkshatGarg2005/car-price-prediction-app](https://github.com/AkshatGarg2005/car-price-prediction-app)
+
+* **GitHub Repository:** https://github.com/dvshriram-dvs/Car-price-predictor
 
 ---
 
-## 🛠️ Tech Stack & Ecosystem
-* **Core Language:** Python 3.10
-* **Machine Learning & Data Processing:** Scikit-learn, Pandas, NumPy
-* **Backend Web Framework:** Flask
-* **Production Web Server:** Gunicorn (WSGI)
-* **Model Serialization:** Pickle
-* **Cloud Platform:** Render (Virginia Region Gateway)
+## 🛠️ Technologies Used
+
+### Programming Language
+
+* Python 3
+
+### Machine Learning
+
+* Scikit-learn
+* Pandas
+* NumPy
+
+### Web Development
+
+* Flask
+* HTML5
+* CSS3
+
+### Deployment & Tools
+
+* Git
+* GitHub
+* Render
+* Pickle
 
 ---
 
-## 📂 Production Directory Architecture
-The repository is engineered according to institutional production guidelines, strictly separating static client UI assets from data matrix operations:
+## 📂 Project Structure
 
 ```text
-📁 car-price-prediction-app/
+Car-price-predictor/
 │
-├── 📁 static/
-│   └── 📄 style.css            # Custom forest green user interface theme
+├── static/
+│   └── style.css
 │
-├── 📁 templates/
-│   └── 📄 index.html           # Core frontend interactive web form
+├── templates/
+│   └── index.html
 │
-├── 📄 app.py                   # Production Flask application engine
-├── 📄 train.py                 # Automated pipeline download & ML model trainer
-├── 📄 car_price_model.pkl      # Serialized Random Forest Regressor binary
-├── 📄 requirements.txt         # Plaintext manifest mapping core dependencies
-├── 📄 Procfile                 # Production WSGI process container config
-└── 📄 .gitignore               # Excludes runtime caches and heavy dataset packages
-
+├── app.py
+├── train.py
+├── car_price_model.pkl
+├── requirements.txt
+├── Procfile
+└── README.md
 ```
 
 ---
 
-## 📊 Dataset & Feature Alignment
+## 📊 Project Overview
 
-The machine learning pipeline utilizes the **Vehicle Dataset from CarDekho** (sourced dynamically from Kaggle). The following features are processed, mapped into numerical fields, and evaluated by the mathematical boundaries of the model:
+This application predicts the expected resale value of a car using historical vehicle data. Users provide information such as:
 
-| Feature Name | Type | Description / Mapped Space |
-| --- | --- | --- |
-| **Present Price** | Continuous | Current showroom valuation of the vehicle (in Lakhs) |
-| **Kilometers Driven** | Discrete | Total numeric mileage history of the car |
-| **Fuel Type** | Categorical | Mapped Target Vectors: `Petrol: 0`, `Diesel: 1`, `CNG: 2` |
-| **Seller Type** | Categorical | Mapped Target Vectors: `Dealer: 0`, `Individual: 1` |
-| **Transmission** | Categorical | Mapped Target Vectors: `Manual: 0`, `Automatic: 1` |
-| **Owners History** | Discrete | Integer count of previous registered owners |
-| **Car Age** | Continuous | Transformed temporal matrix calculated from the build year |
+* Present Price
+* Kilometers Driven
+* Fuel Type
+* Seller Type
+* Transmission Type
+* Number of Previous Owners
+* Vehicle Age
+
+The trained machine learning model processes these inputs and generates an estimated selling price instantly.
 
 ---
 
-## ⚙️ How to Setup and Run Locally
+## 🤖 Machine Learning Model
 
-Follow these instructions to establish an isolated local environment and execute the application:
+**Algorithm Used:** Random Forest Regressor
 
-### 1. Environment Setup & Component Installation
+### Workflow
 
-Open your terminal inside the root directory and activate your target environment manager:
+1. Data Collection
+2. Data Cleaning & Preprocessing
+3. Feature Engineering
+4. Model Training
+5. Model Evaluation
+6. Model Serialization
+7. Flask Integration
+8. Real-Time Prediction
+
+---
+
+## ⚙️ Local Installation
+
+### Clone the Repository
 
 ```bash
-# Create an isolated Conda workspace environment
-conda create -n carprice python=3.10 -y
-conda activate carprice
+git clone https://github.com/dvshriram-dvs/Car-price-predictor.git
+cd Car-price-predictor
+```
 
-# Install the exact production ecosystem dependencies
+### Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Activate Environment
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
-
 ```
 
-### 2. Run the Machine Learning Pipeline
+---
 
-If you wish to re-train the underlying architecture and build the serialized prediction file, invoke the pipeline execution script:
+## ▶️ Run the Application
 
-```bash
-python train.py
-
-```
-
-### 3. Launch the Local Development Engine
-
-Initiate the Flask server microkernel locally:
+Start the Flask server:
 
 ```bash
 python app.py
-
 ```
 
-Once initialized, navigate to `http://127.0.0.1:5000` inside your browser to interact with the application locally.
+Open your browser and visit:
+
+```text
+http://127.0.0.1:5000
+```
 
 ---
 
-## 🚀 Live Cloud Deployment
+## 📈 Features
 
-The architecture is configured for continuous delivery via Git tracking connected directly to a cloud infrastructure cluster hosted on **Render**:
+* Real-time car price prediction
+* Interactive web interface
+* Machine Learning-based valuation
+* Responsive design
+* Fast prediction results
+* Easy deployment support
 
-* The production server boots up efficiently using a standard Linux container layer execution guided by the entry rules defined inside the project `Procfile`.
-* All connections parse clean `POST` form request arrays, routing calculations safely away from client viewpoints directly through the cloud-based `car_price_model.pkl` matrix without any hardcoded fallback conditions.
+---
+
+## 🚀 Future Improvements
+
+* User authentication
+* Prediction history tracking
+* Advanced visual analytics
+* Multiple model comparison
+* API integration
+* Mobile-first dashboard
+
+---
+
+## 📄 License
+
+This project is developed for educational and academic purposes.
+
+---
+
+## ⭐ Author
+
+**D V Shriram**
+23MIM10044
+Integrated M.Tech in Artificial Intelligence
+VIT Bhopal University
